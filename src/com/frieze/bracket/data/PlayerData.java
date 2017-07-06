@@ -3,7 +3,7 @@ package com.frieze.bracket.data;
 import java.util.ArrayList;
 
 //Stores every player
-//Only one instance is available for runtime. This is to ensure that playerLists will stay same.
+
 
 public class PlayerData {
 

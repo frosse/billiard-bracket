@@ -6,8 +6,8 @@ import java.util.ArrayList;
 
 public class CupArrayList extends ArrayList{
 
-    private ArrayList<Player> playerList;
-    private String name;
+    private ArrayList<PlayerList> playerList;
+
 
     public CupArrayList(){
 

@@ -12,7 +12,7 @@ public class FirstWindow {
 
     private FirstWindowUI firstWindowUI;
     private ArrayList<Player> playerList;
-    private AddPlayerPoolWindow addPlayerPoolWindow;
+    private AddPlayerPool addPlayerPool;
 
     public FirstWindow() {
         firstWindowUI = new FirstWindowUI();
@@ -22,6 +22,6 @@ public class FirstWindow {
     }
 
     public void setListener(){
-        firstWindowUI.getFirstWindowGridPane().getNewPlayerPoolButton().setOnAction(e-> addPlayerPoolWindow = new AddPlayerPoolWindow());
+        firstWindowUI.getFirstWindowGridPane().getNewPlayerPoolButton().setOnAction(e-> addPlayerPool = new AddPlayerPool());
     }
 }

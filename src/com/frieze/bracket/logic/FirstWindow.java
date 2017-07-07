@@ -22,6 +22,12 @@ public class FirstWindow {
     }
 
     public void setListener(){
-        firstWindowUI.getFirstWindowGridPane().getNewPlayerPoolButton().setOnAction(e-> addPlayerPool = new AddPlayerPool());
+        firstWindowUI.getFirstWindowGridPane().getNewPlayerPoolButton().setOnAction(e-> listenerActionEvent());
+    }
+
+    public void listenerActionEvent(){
+        addPlayerPool = new AddPlayerPool();
+        firstWindowUI.getFirstWindowGridPane().updateCombobox();
+
     }
 }

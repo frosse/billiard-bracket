@@ -4,6 +4,7 @@ package com.frieze.bracket.logic;
 import com.frieze.bracket.UI.AddPlayerPoolUI;
 import com.frieze.bracket.data.PlayerList;
 import com.frieze.bracket.data.PlayerPool;
+import com.oracle.xmlns.internal.webservices.jaxws_databinding.SoapBindingUse;
 
 public class AddPlayerPool {
 
@@ -19,7 +20,6 @@ public class AddPlayerPool {
         setListener();
         addPlayerPoolUI.showStage();
 
-
     }
 
     private void setListener() {
@@ -29,6 +29,7 @@ public class AddPlayerPool {
     private void makePlayerList(String name) {
         playerList = new PlayerList(name);
         addPlayerPoolUI.closeStage();
+
     }
 
     private String getData() {

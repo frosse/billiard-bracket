@@ -15,7 +15,7 @@ public class FirstWindowGridPane extends GridPane{
     private ToggleButton button64;
     private ToggleGroup buttonGroup;
     private Label playerAmount;
-    private ComboBox playerPoolCombobox;
+    private ComboBox<String> playerPoolCombobox;
     private PlayerPool playerPool;
 
 
@@ -28,6 +28,7 @@ public class FirstWindowGridPane extends GridPane{
         button32 = new ToggleButton("32");
         button64 = new ToggleButton("64");
         nextWindowsButton = new Button("Next");
+        playerPoolCombobox = new ComboBox();
         setPlayerPoolCombobox();
         playerAmount = new Label("How many players:");
         setButtonGroupForToggleButtons();
@@ -37,11 +38,16 @@ public class FirstWindowGridPane extends GridPane{
 
     }
 
-    private void setPlayerPoolCombobox() {
-        playerPoolCombobox = new ComboBox();
-        playerPool.forEach(e -> playerPoolCombobox.getItems().addAll(e));
+    public void setPlayerPoolCombobox() {
+
+        playerPool.getPlayerPoolList().forEach(e -> playerPoolCombobox.getItems().addAll(e.getPlayerPoolName()));
 
     }
+    public void updateCombobox(){
+        playerPoolCombobox.getItems().clear();
+        playerPool.getPlayerPoolList().forEach(e -> playerPoolCombobox.getItems().addAll(e.getPlayerPoolName()));
+    }
+
 
     public void addElementsToGroup(){
         add(button16,2,2);
@@ -61,5 +67,9 @@ public class FirstWindowGridPane extends GridPane{
         button16.setToggleGroup(buttonGroup);
         button32.setToggleGroup(buttonGroup);
         button64.setToggleGroup(buttonGroup);
+    }
+
+    public ComboBox<String> getPlayerPoolCombobox() {
+        return playerPoolCombobox;
     }
 }

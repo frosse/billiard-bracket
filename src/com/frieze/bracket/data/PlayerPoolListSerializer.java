@@ -8,9 +8,9 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 
-public class PlayerDataSerializer  implements Serializable{
+public class PlayerPoolListSerializer implements Serializable{
 
-    public PlayerDataSerializer(){}
+    public PlayerPoolListSerializer(){}
 
     public void serializePlayerList(ArrayList<ArrayList<Player>> playerLists){
 

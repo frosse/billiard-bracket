@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 
-public class PlayerDataDeserializer implements Serializable {
+public class PlayerPoolListDeserializer implements Serializable {
 
 //    public ArrayList<Player> deSerialize(ArrayList<ArrayList<Player>> orgPlayerLists){
 //

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 //This class stores players to ArrayList.
 //And have name so you can choose different playerpool for different tournaments.
-public class PlayerList {
+public class PlayerList extends ArrayList{
 
     private ArrayList<Player> playerList;
     private String playerPoolName;
@@ -14,4 +14,20 @@ public class PlayerList {
         playerList = new ArrayList<>();
 
         }
+
+    public ArrayList<Player> getPlayerList() {
+        return playerList;
+    }
+
+    public void setPlayerList(ArrayList<Player> playerList) {
+        this.playerList = playerList;
+    }
+
+    public String getPlayerPoolName() {
+        return playerPoolName;
+    }
+
+    public void setPlayerPoolName(String playerPoolName) {
+        this.playerPoolName = playerPoolName;
+    }
 }

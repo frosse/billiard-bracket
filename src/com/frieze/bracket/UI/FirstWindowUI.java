@@ -20,6 +20,7 @@ public class FirstWindowUI {
         firstWindowGridPane = new FirstWindowGridPane();
         setScene();
         setStage();
+
     }
 
 
@@ -36,4 +37,7 @@ public class FirstWindowUI {
 
     }
 
+    public FirstWindowGridPane getFirstWindowGridPane() {
+        return firstWindowGridPane;
+    }
 }

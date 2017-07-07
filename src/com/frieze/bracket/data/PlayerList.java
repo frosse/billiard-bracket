@@ -3,7 +3,8 @@ package com.frieze.bracket.data;
 import java.util.ArrayList;
 
 //This class stores players to ArrayList.
-//And have name so you can choose different playerpool for different tournaments.
+//Every tournament has different PlayerList that is stored in PlayerPool class
+
 public class PlayerList extends ArrayList{
 
     private ArrayList<Player> playerList;

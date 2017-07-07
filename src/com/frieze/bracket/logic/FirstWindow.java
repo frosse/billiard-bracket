@@ -12,9 +12,16 @@ public class FirstWindow {
 
     private FirstWindowUI firstWindowUI;
     private ArrayList<Player> playerList;
+    private AddPlayerPoolWindow addPlayerPoolWindow;
 
     public FirstWindow() {
         firstWindowUI = new FirstWindowUI();
+        setListener();
         firstWindowUI.showStage();
+
+    }
+
+    public void setListener(){
+        firstWindowUI.getFirstWindowGridPane().getNewPlayerPoolButton().setOnAction(e-> addPlayerPoolWindow = new AddPlayerPoolWindow());
     }
 }

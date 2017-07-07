@@ -30,4 +30,12 @@ public class AddPlayerPoolGridPane extends GridPane{
         add(playerPoolName,4,4);
         add(infoLabel,4,3);
     }
+
+    public Button getSaveButton() {
+        return saveButton;
+    }
+
+    public TextField getPlayerPoolName() {
+        return playerPoolName;
+    }
 }

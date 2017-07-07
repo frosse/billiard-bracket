@@ -36,4 +36,12 @@ public class AddPlayerPoolUI {
     public void showStage() {
         addPlayerPoolStage.showAndWait();
     }
+
+    public AddPlayerPoolGridPane getAddPlayerPoolGridpane() {
+        return addPlayerPoolGridpane;
+    }
+
+    public void closeStage() {
+        addPlayerPoolStage.close();
+    }
 }

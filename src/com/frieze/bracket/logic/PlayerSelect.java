@@ -1,12 +1,10 @@
 package com.frieze.bracket.logic;
 
-import com.frieze.bracket.UI.PlayerSelectGridPane;
-import com.frieze.bracket.UI.PlayerSelectStage;
+
 import com.frieze.bracket.UI.PlayerSelectUI;
 import com.frieze.bracket.data.Player;
 import com.frieze.bracket.data.PlayerData;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
+
 import javafx.scene.control.ComboBox;
 
 import java.util.ArrayList;

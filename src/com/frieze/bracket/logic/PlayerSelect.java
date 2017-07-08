@@ -5,6 +5,7 @@ import com.frieze.bracket.UI.PlayerSelectUI;
 import com.frieze.bracket.data.Player;
 import com.frieze.bracket.data.PlayerData;
 
+import com.frieze.bracket.data.PlayerList;
 import javafx.scene.control.ComboBox;
 
 import java.util.ArrayList;
@@ -13,11 +14,12 @@ public  class PlayerSelect {
 
     private int playerAmount;
     private ArrayList<ComboBox> comboBoxList = new ArrayList<>();
-    private ArrayList<Player> playerList = new ArrayList<>();
+    private PlayerList playerList;
     private PlayerSelectUI playerSelectUI;
 
-    public PlayerSelect(int playerAmount) {
+    public PlayerSelect(int playerAmount, PlayerList selectedPlayerList) {
         this.playerAmount = playerAmount;
+        this.playerList = selectedPlayerList;
         playerSelectUI = new PlayerSelectUI();
         playerSelectUI.setGridPane(getPlayerAmount());
         setPlayersToComboBoxes(playerSelectUI.getPlayerSelectGridPane().getComboBoxesList());
@@ -45,7 +47,7 @@ public  class PlayerSelect {
     //Takes selected Players from comboboxes so we have all players that gonna participate.
     public void getSelectedPlayers() {
         for (ComboBox cmb : comboBoxList) {
-            playerList.add((Player) cmb.getSelectionModel().getSelectedItem());
+            playerList.getPlayerList().add((Player) cmb.getSelectionModel().getSelectedItem());
         }
     }
 

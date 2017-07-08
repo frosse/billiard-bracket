@@ -1,7 +1,9 @@
 package com.frieze.bracket.UI;
 
 
+import com.frieze.bracket.data.PlayerList;
 import com.frieze.bracket.data.PlayerPool;
+import com.sun.org.apache.bcel.internal.generic.INEG;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
@@ -15,7 +17,7 @@ public class FirstWindowGridPane extends GridPane{
     private ToggleButton button64;
     private ToggleGroup buttonGroup;
     private Label playerAmount;
-    private ComboBox<String> playerPoolCombobox;
+    private ComboBox<PlayerList> playerPoolCombobox;
     private PlayerPool playerPool;
 
 
@@ -25,9 +27,13 @@ public class FirstWindowGridPane extends GridPane{
         buttonGroup = new ToggleGroup();
         newPlayerPoolButton = new Button("New player pool");
         button16 = new ToggleButton("16");
+        button16.setUserData("16");
         button32 = new ToggleButton("32");
+        button32.setUserData("32");
         button64 = new ToggleButton("64");
+        button64.setUserData("64");
         nextWindowsButton = new Button("Next");
+
         playerPoolCombobox = new ComboBox();
         setPlayerPoolCombobox();
         playerAmount = new Label("How many players:");
@@ -40,12 +46,12 @@ public class FirstWindowGridPane extends GridPane{
 
     public void setPlayerPoolCombobox() {
 
-        playerPool.getPlayerPoolList().forEach(e -> playerPoolCombobox.getItems().addAll(e.getPlayerPoolName()));
+        playerPool.getPlayerPoolList().forEach(e -> playerPoolCombobox.getItems().addAll(e));
 
     }
     public void updateCombobox(){
         playerPoolCombobox.getItems().clear();
-        playerPool.getPlayerPoolList().forEach(e -> playerPoolCombobox.getItems().addAll(e.getPlayerPoolName()));
+        playerPool.getPlayerPoolList().forEach(e -> playerPoolCombobox.getItems().addAll(e));
     }
 
 
@@ -69,7 +75,21 @@ public class FirstWindowGridPane extends GridPane{
         button64.setToggleGroup(buttonGroup);
     }
 
-    public ComboBox<String> getPlayerPoolCombobox() {
+    public ComboBox<PlayerList> getPlayerPoolCombobox() {
+
         return playerPoolCombobox;
+    }
+    public int getPlayerAmount(){
+
+        return Integer.parseInt(buttonGroup.getSelectedToggle().getUserData().toString());
+    }
+
+    public PlayerList getSelectedPlayerList(){
+        return playerPoolCombobox.getSelectionModel().getSelectedItem();
+    }
+
+
+    public Button getNextWindowsButton() {
+        return nextWindowsButton;
     }
 }

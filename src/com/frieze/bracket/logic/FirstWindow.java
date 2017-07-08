@@ -17,7 +17,12 @@ public class FirstWindow {
     public FirstWindow() {
         firstWindowUI = new FirstWindowUI();
         setListener();
+        setNextWindowsButtonListener();
         firstWindowUI.showStage();
+
+    }
+    public void setNextWindowsButtonListener(){
+        firstWindowUI.getFirstWindowGridPane().getNextWindowsButton().setOnAction(e -> firstWindowUI.closeStage());
 
     }
 
@@ -29,5 +34,9 @@ public class FirstWindow {
         addPlayerPool = new AddPlayerPool();
         firstWindowUI.getFirstWindowGridPane().updateCombobox();
 
+    }
+
+    public FirstWindowUI getFirstWindowUI() {
+        return firstWindowUI;
     }
 }

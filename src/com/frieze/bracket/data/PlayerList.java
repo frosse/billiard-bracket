@@ -39,10 +39,9 @@ public class PlayerList{
         this.playerPoolName = playerPoolName;
     }
 
+
     @Override
     public String toString() {
-        return "PlayerList{" +
-                "playerPoolName='" + playerPoolName + '\'' +
-                '}';
+        return playerPoolName;
     }
 }

@@ -40,4 +40,8 @@ public class FirstWindowUI {
     public FirstWindowGridPane getFirstWindowGridPane() {
         return firstWindowGridPane;
     }
+
+    public void closeStage() {
+        firstWindowStage.close();
+    }
 }
